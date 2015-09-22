@@ -39,12 +39,12 @@ $(document).ready(function() {
       $("#show-place").show();
 
       $("#show-place h2").text(newPlace.city);
-      $(".city").text(newPlace.city);
+      /*$(".city").text(newPlace.city);*/
       $(".state").text(newPlace.state);
 
       $("ul#details").text("");
       newPlace.details.forEach(function(detail) {
-        $("ul#details").append("<li>" + detail.time + ", " + detail.landmark + ", " + detail.note + "</li>");
+        $("ul#details").append("<ul>" + detail.time + ", " + detail.landmark + ", " + detail.note + "</ul>");
       });
     });
 
